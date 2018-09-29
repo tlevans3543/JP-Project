@@ -1,4 +1,5 @@
 # JP-Project
+# Project supplied through Oracle Academy [www.oracle.com/academy]
 
 Create a flexible structure that could be used in any production line.
 
