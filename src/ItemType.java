@@ -4,8 +4,8 @@
  * Description: Global ENUM for project dictates media type of product for audioplayer.
  */
 
-/** All items will have a pre-set type. Currently there are 4 types. Create an enum called ItemType that will
- //  store the following information:
+/** All items will have a pre-set type. Currently there are 4 types. Create an enum called ItemType
+ *  that will store the following information:
  //
  //  Type          :: Code
  //  Audio         :: AU
@@ -15,6 +15,15 @@
  */
 public enum ItemType {
 
-  AU, VI, AM, VM
+  AUDIO("AU"),
+  VISUAL("VI"),
+  AUDIOMOBILE("AM"),
+  VISUALMOBILE("VM");
 
+  //Handles abbreviations of ItemTypes.
+  private final String abr;
+
+  ItemType(String abr) {
+    this.abr = abr;
+  }
 }
