@@ -25,7 +25,6 @@ public class AudioPlayer extends Product implements MultimediaControl{
   //The constructor should call its parents constructor and also setup the media type.
   public AudioPlayer(String name, String audioSpecification){
     super(name);
-    this.audioSpecification = audioSpecification;
     mediaType = ItemType.valueOf(audioSpecification);
   }
 
@@ -34,18 +33,22 @@ public class AudioPlayer extends Product implements MultimediaControl{
    * console, E.g. in play System.out.println("Playing"); Normally we would have code that would
    * instruct the media player to play, but we will simply display a message.
    */
+  @Override
   public void play() {
-    System.out.print("Playing");
+    System.out.println("Playing");
   }
 
+  @Override
   public void stop() {
     System.out.println("Stopping");
   }
 
+  @Override
   public void previous() {
     System.out.println("Previous");
   }
 
+  @Override
   public void next() {
     System.out.println("Next");
   }

@@ -4,6 +4,8 @@
  * Description: Global ENUM for project dictates media type of product for audioplayer.
  */
 
+import java.util.ArrayList;
+
 /** All items will have a pre-set type. Currently there are 4 types. Create an enum called ItemType
  *  that will store the following information:
  //
@@ -21,9 +23,14 @@ public enum ItemType {
   VISUALMOBILE("VM");
 
   //Handles abbreviations of ItemTypes.
-  private final String abr;
+  private String abbreviation;
 
-  ItemType(String abr) {
-    this.abr = abr;
+  public String getAbbreviation() {
+    return this.abbreviation;
+  }
+
+  ItemType(String abbreviation) {
+    this.abbreviation = abbreviation;
   }
 }
+
