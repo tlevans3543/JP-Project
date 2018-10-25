@@ -12,6 +12,17 @@ public class MoviePlayer extends Product implements MultimediaControl {
     Screen screen;
     MonitorType monitorType;
 
+    //Default Constructor
+    public MoviePlayer(){
+    }
+
+    //Overloaded Constructor
+    public MoviePlayer(String name, Screen screen, MonitorType monitorType){
+        super(name);
+        this.monitorType = monitorType;
+        this.screen = screen;
+    }
+
     //Complete the methods from the MultimediaControl interface in a similar fashion to the audio player.
     @Override
     public void play() {
@@ -35,6 +46,6 @@ public class MoviePlayer extends Product implements MultimediaControl {
 
     //Create a toString method that calls the product toString, displays the monitor and the screen details.
     public String toString(){
-        return super.toString() + screen + monitorType;
+        return super.toString() + screen + "\nMonitor Type   : " + monitorType;
     }
 }

@@ -18,7 +18,7 @@ public class Product implements Item{
 
   // An integer class variable called currentProductionNumber. This will store the next number to
   // be assigned to serialNumber.
-  private int currentProductionNumber = 1;
+  private static int currentProductionNumber = 1;
 
   //Complete the methods from the interface Item.
   public void setProductionNumber(int productionNumber){

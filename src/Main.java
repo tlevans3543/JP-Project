@@ -8,23 +8,17 @@ public class Main {
 
     public static void main(String[] args){
 
-        AudioPlayer myPlayer = new AudioPlayer("Evan's Player","AUDIO");
+        AudioPlayer myPlayer = new AudioPlayer("Evan's Player","MP3");
+        MoviePlayer myMovie = new MoviePlayer("Evan's Movie", new Screen(), MonitorType.LCD);
 
-        System.out.println(myPlayer.mediaType);
+        myMovie.screen.refreshrate = 60;
+        myMovie.screen.resolution = "1920x1080";
+        myMovie.screen.responsetime = 5;
 
-        myPlayer.play();
+        System.out.println(myMovie.toString());
 
-        myPlayer.next();
-
-        myPlayer.previous();
-
-        myPlayer.stop();
-
-        Screen myScreen = new Screen();
-
-        System.out.println(myScreen.toString());
-
-
+        System.out.println();
+        System.out.println(myPlayer.toString());
 
     }
 

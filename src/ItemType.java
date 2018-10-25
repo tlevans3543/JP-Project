@@ -1,7 +1,7 @@
 /**
  * Author(s): Trevor Evans
  * Date: 29-09-2018
- * Description: Global ENUM for project dictates media type of product for audioplayer.
+ * Description: Global ENUM for project dictates media type of product for audioPlayer.
  */
 
 import java.util.ArrayList;
@@ -23,7 +23,7 @@ public enum ItemType {
   VISUALMOBILE("VM");
 
   //Handles abbreviations of ItemTypes.
-  private String abbreviation;
+  public String abbreviation;
 
   public String getAbbreviation() {
     return this.abbreviation;
