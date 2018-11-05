@@ -8,8 +8,8 @@
 import java.util.Date;
 
 /** An abstract type called Product that will implement the Item interface. Product will implement
-    the basic functionality that all items on a production line should have. */
-public class Product implements Item{
+ the basic functionality that all items on a production line should have. */
+public class Product implements Item,Comparable<Product>{
 
   private int serialNumber;
   private String manufacturer = Item.manufacturer;
@@ -66,9 +66,14 @@ public class Product implements Item{
    */
   public String toString(){
     return "Manufacturer   : " + manufacturer +
-           "\nSerial Number  : " + serialNumber +
-           "\nDate           : " + manufacturedOn +
-           "\nName           : " + name;
+            "\nSerial Number  : " + serialNumber +
+            "\nDate           : " + manufacturedOn +
+            "\nName           : " + name;
+  }
+
+  @Override
+  public int compareTo(Product p) {
+    return this.getName().compareTo(p.getName());
   }
 
 }

@@ -25,7 +25,7 @@ public class AudioPlayer extends Product implements MultimediaControl{
   //The constructor should call its parents constructor and also setup the media type.
   public AudioPlayer(String name, String audioSpecification){
     super(name);
-    mediaType = ItemType.AUDIO;
+    mediaType = ItemType.AU;
     this.audioSpecification = audioSpecification;
   }
 
@@ -60,8 +60,8 @@ public class AudioPlayer extends Product implements MultimediaControl{
    */
   public String toString(){
     return super.toString() +
-        "\nAudio Spec     : " + audioSpecification +
-        "\nMedia Type     : " + mediaType;
+            "\nAudio Spec     : " + audioSpecification +
+            "\nMedia Type     : " + mediaType;
   }
 
 }

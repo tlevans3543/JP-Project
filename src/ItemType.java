@@ -4,8 +4,6 @@
  * Description: Global ENUM for project dictates media type of product for audioPlayer.
  */
 
-import java.util.ArrayList;
-
 /** All items will have a pre-set type. Currently there are 4 types. Create an enum called ItemType
  *  that will store the following information:
  //
@@ -17,20 +15,27 @@ import java.util.ArrayList;
  */
 public enum ItemType {
 
-  AUDIO("AU"),
-  VISUAL("VI"),
-  AUDIOMOBILE("AM"),
-  VISUALMOBILE("VM");
+  AU("AUDIO"),
+  VI("Visual"),
+  AM("AUDIOMOBILE"),
+  VM("VisualMobile");
 
   //Handles abbreviations of ItemTypes.
-  public String abbreviation;
+  //enum constant
+  private final String code;
 
-  public String getAbbreviation() {
-    return this.abbreviation;
+
+  /* Constructor is private by default
+   *  Allows me to use strings in the parenthesis above
+   */
+  ItemType(String code) {
+    this.code = code;
   }
 
-  ItemType(String abbreviation) {
-    this.abbreviation = abbreviation;
+  /* Overrides toString and allows the programmer to use the enum
+   */
+  @Override
+  public String toString() {
+    return code;
   }
 }
-
